@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>DiffCode</title>
+<style media="screen">
+  body{
+    text-align: center;
+  }
+  .nitin{
+    width: 100%;
+  }
+</style>
+</head>
+
+<body>
+  <h1><%= ans %></h1>
+  <form class="" action="/" method="post">
+    <table class="nitin">
+      <tr>
+        <th>
+          <label for="code1"><%= inout1 %></label>
+        <textarea id="code1" name="code1" rows="20" cols="50" placeholder="<%= code1 %>" required></textarea>
+          <% console.log(code1); %>
+        </th>
+        <th>
+          <label for="code2"><%= inout2 %></label>
+          <textarea id="code2" name="code2" rows="20" cols="50" placeholder="<%= code2 %>" required></textarea>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <label for="code1_lang">Lang</label>
+          <select class="" name="code1_lang" id="code1_lang">
+            <option value="C">C</option>
+            <option value="C++" selected>C++</option>
+            <option value="Py">Py</option>
+            <option value="C#">C#</option>
+          </select>
+        </th>
+        <th>
+          <label for="code2_lang">Lang</label>
+          <select class="" name="code2_lang" id="code2_lang">
+            <option value="C">C</option>
+            <option value="C++" selected>C++</option>
+            <option value="Py">Py</option>
+            <option value="C#">C#</option>
+          </select>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <label for="code1_time">Time used</label>
+          <h1 id="code1_space"><%= code1_time %></h1>
+        </th>
+        <th>
+          <label for="code2_time">Time used</label>
+          <h1 id="code2_time"><%= code2_time %></h1>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <label for="code1_space">Memory used</label>
+          <h1 id="code1_space"><%= code1_space %></h1>
+        </th>
+        <th>
+          <label for="code2_space">Memory used</label>
+          <h1 id="code2_space"><%= code2_space %></h1>
+        </th>
+      </tr>
+    </table>
+
+    <label for="input"></label>
+    <textarea id="input" name="input" rows="4" cols="50" placeholder="<%= inp %>"></textarea>
+    <br>
+    <button type="submit" name="button">check</button>
+  </form>
+</body>
+
+</html>
